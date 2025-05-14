@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI мұғалім демо - AI-Tutor Qyzylorda</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text"><span class="highlight">AI-Tutor</span> Qyzylorda</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#features" class="nav-link">Мүмкіндіктер</a></li>
+                    <li><a href="index.html#programs" class="nav-link">Бағдарламалар</a></li>
+                    <li><a href="index.html#how-it-works" class="nav-link">Қалай жұмыс істейді</a></li>
+                    <li><a href="index.html#faq" class="nav-link">Жиі қойылатын сұрақтар</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Кіру</a>
+                <a href="register.html" class="btn btn-primary">Тіркелу</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html#features" class="mobile-link">Мүмкіндіктер</a></li>
+            <li><a href="index.html#programs" class="mobile-link">Бағдарламалар</a></li>
+            <li><a href="index.html#how-it-works" class="mobile-link">Қалай жұмыс істейді</a></li>
+            <li><a href="index.html#faq" class="mobile-link">Жиі қойылатын сұрақтар</a></li>
+            <li><a href="login.html" class="mobile-link">Кіру</a></li>
+            <li><a href="register.html" class="mobile-link">Тіркелу</a></li>
+        </ul>
+    </div>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-header">
+                <h1>AI мұғалім демо нұсқасы</h1>
+                <p>Біздің AI мұғалім технологиясын тегін сынап көріңіз. Кез-келген пән бойынша сұрақ қойыңыз.</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-sidebar">
+                    <div class="demo-subjects">
+                        <h3>Пәндер</h3>
+                        <ul class="subject-list">
+                            <li class="active" data-subject="all">Барлық пәндер</li>
+                            <li data-subject="math">Математика</li>
+                            <li data-subject="physics">Физика</li>
+                            <li data-subject="chemistry">Химия</li>
+                            <li data-subject="biology">Биология</li>
+                            <li data-subject="programming">Программалау</li>
+                            <li data-subject="english">Ағылшын тілі</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="demo-examples">
+                        <h3>Мысал сұрақтар</h3>
+                        <div class="example-questions">
+                            <div class="example-question" data-question="Пифагор теоремасын түсіндіріп беріңізші">
+                                <p>Пифагор теоремасын түсіндіріп беріңізші</p>
+                            </div>
+                            <div class="example-question" data-question="Ньютонның үшінші заңын қалай қолдануға болады?">
+                                <p>Ньютонның үшінші заңын қалай қолдануға болады?</p>
+                            </div>
+                            <div class="example-question" data-question="Менделеев кестесіндегі элементтердің периодтық заңдылығы неде?">
+                                <p>Менделеев кестесіндегі элементтердің периодтық заңдылығы неде?</p>
+                            </div>
+                            <div class="example-question" data-question="Python тілінде функция қалай жазылады?">
+                                <p>Python тілінде функция қалай жазылады?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-chat">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Сәлеметсіз бе! Мен AI-Tutor Qyzylorda жобасының AI мұғалімімін. Сізге қандай пән бойынша көмек керек?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <form id="chatForm">
+                            <div class="input-container">
+                                <input type="text" id="userMessage" placeholder="Сұрағыңызды жазыңыз..." autocomplete="off">
+                                <div class="input-buttons">
+                                    <button type="button" class="mic-button" id="micButton">
+                                        <i class="fas fa-microphone"></i>
+                                    </button>
+                                    <button type="submit" class="send-button">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-cta">
+                <h2>Толық нұсқасын қолданғыңыз келе ме?</h2>
+                <p>Тіркеліп, AI-Tutor Qyzylorda платформасының барлық мүмкіндіктерін пайдаланыңыз</p>
+                <a href="register.html" class="btn btn-primary btn-lg">Тіркелу</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text"><span class="highlight">AI-Tutor</span> Qyzylorda</span>
+                    <p>Жасанды интеллект көмегімен білім сапасын жаңа деңгейге шығарамыз</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li><a href="index.html#features">Мүмкіндіктер</a></li>
+                            <li><a href="index.html#programs">Бағдарламалар</a></li>
+                            <li><a href="index.html#how-it-works">Қалай жұмыс істейді</a></li>
+                            <li><a href="index.html#faq">Жиі қойылатын сұрақтар</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Бағдарламалар</h3>
+                        <ul>
+                            <li><a href="ubt-program.html">ҰБТ дайындық</a></li>
+                            <li><a href="ielts-program.html">IELTS/TOEFL</a></li>
+                            <li><a href="programming.html">Программалау</a></li>
+                            <li><a href="all-programs.html">Барлық бағдарламалар</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Байланыс</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> Қызылорда қ., Әбілқайыр хан к-сі, 12</li>
+                            <li><i class="fas fa-phone"></i> +7 (747) 123-45-67</li>
+                            <li><i class="fas fa-envelope"></i> info@ai-tutor-qyzylorda.kz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AI-Tutor Qyzylorda. Барлық құқықтар қорғалған.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Құпиялылық саясаты</a>
+                    <a href="terms.html">Қолдану шарттары</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>
